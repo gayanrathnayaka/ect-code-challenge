@@ -1,0 +1,33 @@
+<app-page-layout>
+  <h2>
+    Write a function which checks if two objects are equivalent - “undefined”
+    and “null” can be treated as equal - consider all primitive types, objects,
+    arrays and dates
+  </h2>
+  <div class="wrapper">
+    <div class="code-block">
+      <pre><code [highlight]="code" [languages]="['typescript']"></code></pre>
+    </div>
+
+    <div class="description">
+      <p>
+        There are many ways to check if two objects are equal in javascript.
+        However, there is no inbuilt method or shortcut to check if two objects
+        are equal in Javascript. I have mentioned some of the ways to check if
+        two objects are equal in javascript below.
+      </p>
+      <ul>
+        <li>Using JSON.stringify() and JSON.parse()</li>
+        <li>Object.keys</li>
+      </ul>
+      <p style="color: rgb(215, 73, 102)">
+        The best way to check if two objects are equal is to use lodash isEqual
+      </p>
+
+      <p style="color: rgb(144, 73, 215)">
+        The method I have written can be used to check if two objects are equal
+        and it will return a boolean.
+      </p>
+    </div>
+  </div>
+</app-page-layout>

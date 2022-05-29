@@ -1,0 +1,31 @@
+<app-page-layout>
+  <h2>Create a function which creates a deep copy of an object</h2>
+  <div class="wrapper">
+    <div class="code-block">
+      <pre><code [highlight]="code" [languages]="['typescript']"></code></pre>
+    </div>
+
+    <div class="description">
+      <p>
+        There are many ways deep copy an object in javascript. However, there is
+        no inbuilt method or shortcut to deep copy an object in Javascript. I
+        have mentioned some of the ways to deep copy an object in javascript
+        below.
+      </p>
+      <ul>
+        <li>Using JSON.stringify() and JSON.parse()</li>
+        <li>Using Object.assign()</li>
+        <li>Using the ... spread operator</li>
+      </ul>
+      <p style="color: rgb(215, 73, 102)">
+        The best way to deep copy an object is to use lodash deep clone or ramda
+        clone functions.
+      </p>
+
+      <p style="color: rgb(144, 73, 215)">
+        The method I have written can be used to deep copy an object and it will
+        return a new object.
+      </p>
+    </div>
+  </div>
+</app-page-layout>

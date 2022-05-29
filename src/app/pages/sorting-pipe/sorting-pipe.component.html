@@ -1,0 +1,39 @@
+<app-page-layout>
+  <h2>Create a sorting pipe</h2>
+  <div class="wrapper">
+    <div class="code-block">
+      <pre><code [highlight]="code" [languages]="['typescript']"></code></pre>
+    </div>
+
+    <div class="description">
+      <p>Original list</p>
+      <ul>
+        <li>name: John, age: 20, price: 100</li>
+        <li>name: Mary, age: 30, price: 200</li>
+        <li>name: Mike, age: 40, price: 300</li>
+        <li>name: Adam, age: 50, price: 400</li>
+        <li>name: Pete', age: 60, price: 500</li>
+        <li>name: Paul, age: 70, price: 600</li>
+      </ul>
+      <p style="color: rgb(215, 73, 102)">
+        Sorted by name ascending , using the pipe
+      </p>
+
+      <ul *ngFor="let item of listOfNames | CustomSort: 'name'">
+        <li>
+          name: {{ item.name }} , age: {{ item.age }} , price: {{ item.price }}
+        </li>
+      </ul>
+
+      <p style="color: rgb(144, 73, 215)">
+        Sorted by name descending and price ascending , using the pipe
+      </p>
+
+      <ul *ngFor="let item of listOfNames | CustomSort: ['-name', 'price']">
+        <li>
+          name: {{ item.name }} , age: {{ item.age }} , price: {{ item.price }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</app-page-layout>

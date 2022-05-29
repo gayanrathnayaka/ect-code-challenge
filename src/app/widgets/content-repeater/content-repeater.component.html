@@ -1,0 +1,5 @@
+<div class="container">
+  <div *ngFor="let item of option" class="children">
+    <div *ngTemplateOutlet="templateRef; context: { $implicit: item }"></div>
+  </div>
+</div>

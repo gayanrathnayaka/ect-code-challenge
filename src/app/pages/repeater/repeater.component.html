@@ -1,0 +1,26 @@
+<app-page-layout>
+  <h2>
+    Create a repeater component which repeats everything within the enclosing
+    tags
+  </h2>
+  <app-content-repeater [option]="data">
+    <ng-template let-item>
+      {{ item.age }} - {{ item.name }} - {{ item.price }}
+    </ng-template>
+  </app-content-repeater>
+
+  <div class="codeBlock">
+    <div class="repeater-page">
+      <h3>Template</h3>
+      <pre><code [highlight]="codePage" [languages]="['typescript']"></code></pre>
+    </div>
+    <div class="contet-repeater">
+      <h3>Repeater Component</h3>
+      <pre><code [highlight]="codeRepeater" [languages]="['typescript']"></code></pre>
+    </div>
+
+    <h3 style="color: rgb(215, 73, 102)">
+      Content Projection and ngTemplateOutlet is used for this solution
+    </h3>
+  </div>
+</app-page-layout>

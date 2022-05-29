@@ -1,0 +1,41 @@
+<app-page-layout>
+  <h2>Write a function which executes a string provided javascript code</h2>
+
+  <div class="executeForm">
+    <form #form="ngForm" (ngSubmit)="onClickSubmit(form.value)">
+      <input
+        style="width: 400px"
+        type="text"
+        name="expression"
+        placeholder="please enter the expression"
+        autocomplete="off"
+        ngModel
+      />
+
+      <input
+        style="width: 50px; margin-left: 10px"
+        type="text"
+        name="val1"
+        placeholder="value a"
+        autocomplete="off"
+        ngModel
+      />
+      <input
+        style="width: 50px; margin-left: 10px"
+        type="text"
+        name="val2"
+        autocomplete="off"
+        placeholder="value b"
+        ngModel
+      />
+      <input style="margin-left: 10px" type="submit" value="Execute" />
+    </form>
+    <p *ngIf="result">Result : {{ result }}</p>
+  </div>
+
+  <div class="wrapper">
+    <div class="code-block">
+      <pre><code [highlight]="code" [languages]="['typescript']"></code></pre>
+    </div>
+  </div>
+</app-page-layout>
